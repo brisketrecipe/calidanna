@@ -4,18 +4,18 @@ import { useState } from 'react';
 const ContactSection = styled.section`
   padding: 100px 0;
   background-color: var(--light-blue);
+  width: 100vw;
 `;
 
 const ContactContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 10px;
   }
 `;
 
@@ -24,6 +24,9 @@ const ContactForm = styled.form`
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
 `;
 
 const FormGroup = styled.div`

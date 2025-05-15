@@ -4,12 +4,15 @@ import styled from '@emotion/styled';
 const TestimonialsSection = styled.section`
   padding: 100px 0;
   background-color: var(--light-purple);
+  width: 100vw;
 `;
 
 const TestimonialsContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100vw;
+  padding: 0 40px;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 const TestimonialsGrid = styled.div`
@@ -17,6 +20,10 @@ const TestimonialsGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 50px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 `;
 
 const TestimonialCard = styled.div`
@@ -24,6 +31,10 @@ const TestimonialCard = styled.div`
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
 `;
 
 const TestimonialContent = styled.p`

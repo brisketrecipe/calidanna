@@ -3,12 +3,15 @@ import styled from '@emotion/styled';
 const ServicesSection = styled.section`
   padding: 100px 0;
   background-color: var(--light-pink);
+  width: 100vw;
 `;
 
 const ServicesContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100vw;
+  padding: 0 40px;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 const ServicesGrid = styled.div`
@@ -16,6 +19,10 @@ const ServicesGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 50px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 `;
 
 const ServiceCard = styled.div`
@@ -24,7 +31,10 @@ const ServiceCard = styled.div`
   padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  
+  width: 100%;
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
   &:hover {
     transform: translateY(-5px);
   }
@@ -58,12 +68,18 @@ const ServiceTitle = styled.h3`
   color: var(--primary-color);
   font-size: 1.5rem;
   margin-bottom: 15px;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const ServiceDescription = styled.p`
   color: var(--text-color);
   margin-bottom: 20px;
   line-height: 1.6;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const ServicePrice = styled.div`
@@ -81,7 +97,11 @@ const ServiceButton = styled.a`
   text-decoration: none;
   border-radius: 25px;
   transition: background-color 0.3s ease;
-  
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
   &:hover {
     background-color: #ff1493;
   }

@@ -4,15 +4,20 @@ const FooterContainer = styled.footer`
   background-color: var(--text-color);
   color: white;
   padding: 50px 0 20px;
+  width: 100vw;
 `;
 
 const FooterContent = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100vw;
+  padding: 0 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
 `;
 
 const FooterSection = styled.div`
