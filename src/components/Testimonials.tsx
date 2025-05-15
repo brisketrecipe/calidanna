@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { useState } from 'react';
 
 const TestimonialsSection = styled.section`
   padding: 100px 0;
