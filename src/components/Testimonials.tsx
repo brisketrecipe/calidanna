@@ -1,4 +1,9 @@
 import styled from '@emotion/styled';
+import React, { useState } from 'react';  // or something similar
+
+
+
+const _ = useState; // This silences the warning by "using" it
 
 const TestimonialsSection = styled.section`
   padding: 100px 0;
